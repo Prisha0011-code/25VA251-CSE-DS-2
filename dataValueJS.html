@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Value Types in JavaScript</title>
+</head>
+<body>
+    <script>
+        //Primitive: single value(immutable)
+        //String / Number / Boolean / Null / Undefined / Symbol
+        let name="Prisha";
+        console.log(name);
+        console.log(typeof (name));
+        let age=19;
+        console.log(age);
+        console.log(typeof (age));
+        let isMarried=false;
+        console.log(isMarried);
+        console.log(typeof (isMarried));
+        let address=null;
+        console.log(address);
+      // BigInt
+      let salary=BigInt(500000);
+        console.log(salary);
+        //Symbol
+        let name1=Symbol("Noor");
+        let name2=Symbol("Noor");
+        console.log(name1==name2);
+        // Non-Primitive/ Reference: multiple value(mutable)
+        //Object / Array / Function
+        //Object{}: an object is a collection of it's keys and values.
+        let student={
+            name:"Prisha",
+            age:19,
+            isMarried:false,
+            address: {
+                city:"Lucknow",
+                state:"UP",
+                country:"India"
+            },
+            course:"B.Tech",
+            branch:"CSE",
+            year:2025,
+           getinfo:function(){
+                return this.name+" is a student of "+this.course+" in "+this.branch+" branch.";
+            }
+        };
+        console.log(student);
+        // accessing object properties
+        //dot notation
+        console.log(student.name);
+        console.log(typeof (student));
+        console.log(student.getinfo());
+        // find object's property
+        console.log("name" in student);
+        // delete object's property
+        delete student.year;
+        console.log(student);
+
+</script>
+</body>
+</html>
