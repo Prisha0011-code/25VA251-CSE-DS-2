@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTION JS</title>
+</head>
+<body>
+    <script>
+        //Function: A JavaScript function is a resusable block of code designed to perform a specific task.
+        //normal function(without parameter)
+        function demo(){
+          console.log("Hello JS ");
+        }
+        demo();
+        //(with parameter)
+        function demo1(text){
+            console.log("Hello " + text);}
+            demo1("JavaScript");
+            //function with default parameters
+            function add(a,b=10){
+                console.log("Addition of two numbers is " + (a+b));
+            }
+            add(23);
+            //Annonymos Function
+            let cal=function(){
+                var num1=5;
+                var num2=10;
+                var res=num1*num2;
+                console.log("Multiply of num1 and num2 "+res);
+            }  
+            cal();
+            //Arrow functions with multiline statement
+            let div=(x,y)=>{
+                var num1=x;
+                var num2=y;
+                var res=x/y;
+                console.log("Division is "+res);
+
+            }
+            div(12,3);
+            // Arrow function with single line statement
+            let msg=()=>console.log("Hello ABES");
+            msg();
+            //callback function: a function that is passed as an argument to another function and 
+            // is executed after a certain event or condition is met.
+            // callback using setTimeout API
+            
+
+        
+    </script>
+</body>
+</html>
